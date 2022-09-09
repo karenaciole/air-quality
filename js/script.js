@@ -1,5 +1,7 @@
 'use strict';
 
+//const city = document.getElementById('city').value;
+
 const getAirQualityFromCoordenades = async() => {
     getCoordenadesByCityName().then(async coordenades => {
         const lat = coordenades.lat;

@@ -20,11 +20,11 @@
             <form id="#">
                 <input type="text" placeholder="Search a location" name="location" id="city">
                 <button type="submit" class="btn">
-                    <img class="button__search" src="../assets/search-icon.svg" alt="search">
+                    <img class="button__search" src="/assets/search-icon.svg" alt="search">
             </button>
         </div>
         <div class="circle-primary">
-            <img class="house__img"src="../assets/air-quality.svg" alt="co2 house">
+            <img class="house__img"src="/assets/air-quality.svg" alt="co2 house">
         </div>
     </section>
 
@@ -33,8 +33,8 @@
             <h3>Made with 💟 by Karen Aciole <a href="https://github.com/karen-aciole/air-quality" target="_blank"><i class="fa fa-github"></i></a></h3>
         </div>
     </footer>
-    <script type='text/javascript' src='../js/config.js'></script>
-    <script src="../js/script.js"></script>
+    <script type='text/javascript' src='/js/config.js'></script>
+    <script src="/js/script.js"></script>
     <script>
         const form = document.getElementById('#');
         const city = document.getElementById('city');
@@ -44,9 +44,9 @@
 
             const cityValue = city.value;
             
-            sessionStorage.setItem('city', cityValue);
-            window.location.href = '/pages/airquality.html';
-            cityValue.value = '';
+            sessionStorage.setItem('city-location', cityValue);
+            window.location.href = "data.html";
+            locationValue.value = '';
         });
     </script> 
 </body>
