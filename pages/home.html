@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air pollution worldwide</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+    <h1>
+        <span class="normalStyle">Explore the </span>
+        <span class="diffStyle">
+            <br>Air Quality</br></span>
+        <span class="normalStyle">of any location <br>in Real-Time</br></span>
+    </h1>
+    <section>
+        <div class="search">
+            <form id="#">
+                <input type="text" placeholder="Search a location" name="location" id="city">
+                <button type="submit" class="btn">
+                    <img class="button__search" src="../assets/search-icon.svg" alt="search">
+            </button>
+        </div>
+        <div class="circle-primary">
+            <img class="house__img"src="../assets/air-quality.svg" alt="co2 house">
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Made with 💟 by Karen Aciole <a href="https://github.com/karen-aciole/air-quality" target="_blank"><i class="fa fa-github"></i></a></h3>
+        </div>
+    </footer>
+    <script type='text/javascript' src='../js/config.js'></script>
+    <script>
+        const form = document.getElementById('#');
+        const city = document.getElementById('city');
+        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const cityValue = city.value;
+            
+            sessionStorage.setItem('city-location', cityValue);
+            window.location.href = "data.html";
+            locationValue.value = '';
+        });
+    </script> 
+    <script src="../js/app.js"></script>
+</body>
+</html>
