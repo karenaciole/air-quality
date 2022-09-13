@@ -4,8 +4,16 @@ const fetchCoordenades = async(city) => {
     const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`;
     
     await fetch(url).then(res => res.json())
-    .then(jsonObj => fetchAirQuality(jsonObj.coord))
-    .catch(() => alert ('City not found'));
+    .catch(() => alert ('City not found'))
+    .then(jsonObj => fetchAirQuality(jsonObj.coord));
+}
+
+const fetchCityName = async(city) => {
+    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`;
+    
+    await fetch(url).then(res => res.json())
+    .catch(() => alert ('City not found'))
+    .then(jsonObj =>  displayTitle(jsonObj.name, jsonObj.sys.country));
 }
 
 const fetchAirQuality = async(coordenades) => {
@@ -14,8 +22,8 @@ const fetchAirQuality = async(coordenades) => {
     const url = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
         
     await fetch(url).then(res => res.json())
-    .then(dataJson => displayUi (dataJson))
-    .catch(() => alert ('Unable to fetch data'));
+    .catch(() => alert ('Unable to fetch data'))
+    .then(dataJson => displayUi (dataJson));
 }
 
 const displayUi = (dataJson) => {
@@ -34,5 +42,16 @@ const displayUi = (dataJson) => {
     document.getElementById('template').innerHTML = template;
 }
 
+const displayTitle = (city, country) => {
+    const title = `<h1>${city}, ${country}</h1>`;
+    document.getElementById('city-location').innerHTML = title;
+    document.title = `Air quality in ${city}, ${country}`;
+
+    //const date = new Date();
+    //const day = date.getDate();
+
+}
 
 fetchCoordenades(document.getElementById('city-location').textContent);
+fetchCityName(document.getElementById('city-location').textContent);
+
