@@ -1,0 +1,27 @@
+{
+  "name": "air-quality-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karen-aciole/air-quality.git"
+  },
+  "keywords": [
+    "api",
+    "weather",
+    "css",
+    "air-quality",
+    "html",
+    "js"
+  ],
+  "author": "Karen Anne Aciole Alves",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karen-aciole/air-quality/issues"
+  },
+  "homepage": "https://github.com/karen-aciole/air-quality#readme"
+}

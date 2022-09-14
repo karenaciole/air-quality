@@ -6,28 +6,31 @@
     <meta name="viewport" content="width=device-width>, initial-scale=1.0">
     <title>  </title>
     <link rel="stylesheet" href="../css/style.css">
-    
 </head>
 <body>
-    <div>City name: <span id="city-location"></span></div>
     <section>
-        <div class="search_data">
-            <form id="#">
+        <form id="#">
+            <div class="search_data">
                 <input type="text" placeholder="Search a location" name="location" id="city">
                 <button type="submit" class="btn">
                     <img class="button__search" src="../assets/search-icon.svg" alt="search">
-            </button>
-    </section>
-    <div class="container"> 
-        <div class="card">
-            <img scr="DEFAULT IMAGE GOES HERE" alt="airquality" class="card__image">
+                </button>
+            </div>
+        </form>
+    </section>    
+    <div><span id="city-resp"></span></div>
+    <div class="card">
+        <div class="container">
+            <img class="img__airquality" alt="Image based on air quality" src="../assets/very-good.svg">
+            <span id="qualitative-name"><span>
+            <h4>Polluant Components in μg/m3</h4>
+            <div id="template"></div>
         </div>
     </div>
-    <div id="template"></div>
     <script type='text/javascript' src='../js/config.js'></script>
     <script>
         const city = sessionStorage.getItem('city-location');
-        document.getElementById('city-location').textContent = city;
+        document.getElementById('city-resp').textContent = city;
     </script>
     <script src="../js/app.js"></script>
 </body>
