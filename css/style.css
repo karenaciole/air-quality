@@ -30,21 +30,10 @@ h1 {
   background-color: #628d9a;
 }
 
-.search input[type="text"], .search_data input[type="text"] {
+.search, .search_data {
   position: relative;
-  width: 500px;
-  height: 50px;
-  font-family: 'Inter', sans-serif;
-  text-align: center;
-  font-size: 16px;
-  background: #fffdfd;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-  border: none;
-}
-
-.search input[type="text"] { 
-  margin-top: 140px;
+  border-radius: 30px;
+  padding: 3px 50px 3px 10px;
 }
 
 .search {
@@ -60,25 +49,43 @@ h1 {
   display: flex;
 }
 
-.search .btn, .search_data .btn {
+#city {
+  width: 500px;
+  height: 50px;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  font-size: 16px;
+  background: #fffdfd;
+  outline: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: 0;
+}
+
+.search input[type="text"] { 
+  margin-top: 140px;
+}
+
+
+.btn {
   background-color: transparent;
   position: absolute;
   padding: 0;
-  border: none;
-  outline: none;
+  border-radius: 50%;
+  border: 0;
+  outline: 0;
   cursor: pointer;
 }
 
 .search .btn { 
-  top: 322px;
-  left: 970px;
-  margin-top: 140px;
+  top: 158px;
+  left: 475px;
 }
 
 .search_data .btn { 
-  top: -60px;
-  right: 785px;
-  margin-top: 140px;
+  top: -78px;
+  right: 70px;
+  margin-top: 95px;
 }
 
 .circle-primary { 
@@ -102,7 +109,7 @@ h1 {
 .footer-content { 
   position: fixed;
   left: 0;
-  bottom: 0;
+  bottom: 50px;
   width: 100%;
   background-color: #f5f0e8;
   color: rgb(54, 54, 54);
@@ -112,6 +119,8 @@ h1 {
   font-size: 14px;
 }
 
+
 ul {
+  position: absolute;
   color: red;
 }
