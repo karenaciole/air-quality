@@ -119,8 +119,6 @@ h1 {
   font-size: 14px;
 }
 
-
-
 .container { 
   position: absolute;
   left: 290px;
@@ -136,56 +134,48 @@ h1 {
   position: relative;
   width: 100%;
   height: 30%;
-  top: 20px;
+  top: -25px;
   object-fit: scale-down;
 }
 
-.container air_quality__text {
-  position: relative;
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 30px;
-  text-align: center;
-  color: #000000;
-  top: 20px;
-}
 
-.container h3 {
-  position: relative;
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 30px;
-  text-align: center;
-  color: #000000;
-  top: -15px;
-
-}
-
-.container h4 { 
+.container #index {
   position: relative;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 32px;
   line-height: 30px;
   text-align: center;
   color: #000000;
-  top: -5px;
+  top: -30px;
+
 }
 
-#template ul {
+.container #polluant { 
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  line-height: 30px;
+  color: #000000;
+  top: 250px;
+}
+
+.container #template ul{
   width: 80%;
   height: 50%;
   position: absolute;
-  top: 280px;
+  top: 290px;
   left: 20px;
   color: black;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 300;
   line-height: 25px;  
+  text-align: left;
+  list-style: none;
 }
+

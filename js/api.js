@@ -3,7 +3,7 @@ import { displayUi, displayTitle } from "./app.js";
 export const fetchCoordenades = async(city) => {
     const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`;
     
-    await fetch(url).then(res => res.json())
+    await fetch(url).then(res => res.json()) 
     .catch(() => alert ('City not found 😢'))
     .then(jsonObj => fetchAirQuality(jsonObj.coord));
 }
